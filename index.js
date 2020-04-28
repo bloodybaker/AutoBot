@@ -15,7 +15,7 @@ bot.command("/result",async (ctx) =>{
         sw = true;
         while (true){
             let movieUrl = "https://www.copart.com/lotSearchResults/?free=true&query=";
-            let browser = await puppeteer.launch();
+            let browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
             let page = await browser.newPage();
             await page.goto(movieUrl,{waitUntil:'networkidle2'});
             let data = await page.evaluate(() => {
