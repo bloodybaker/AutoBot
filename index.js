@@ -1,6 +1,6 @@
 const Telegraf = require('telegraf')
 const puppeteer = require('puppeteer');
-const bot = new Telegraf('1033482254:AAHpulE02XSbwTtUQ-baKxYVrwfsAALnNEs')
+const bot = new Telegraf('1017532395:AAHFl7r9W20t42kRrv1QoWcJppzTQ-IEXIY')
 const delay = (time) => new Promise((resolve) => setInterval(() => resolve(), time))
 var sw;
 var lot;
