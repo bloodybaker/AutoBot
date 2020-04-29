@@ -29,9 +29,9 @@ bot.command("/result",async (ctx) =>{
             if(id!=lot){
                 id = lot;
                 return ctx.reply(lot);
-                console.log("[" + time + "]" + "New lot: " + lot)
+                console.log("[" + time + "]" + "New lot: " + lot + " for user: " + ctx.from.username)
             }else {
-                console.log("[" + time + "]" + "Failed: " + lot)
+                console.log("[" + time + "]" + "Failed: " + lot + " for user: " + ctx.from.username)
             }
             debugger;
             await browser.close()
