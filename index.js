@@ -31,7 +31,7 @@ bot.command("/result",async (ctx) =>{
                     let lots = document.querySelector('div[class=table-row]').innerText;
                     return lots;
                 })
-                let getUrl =await page.evaluate(() => {
+                let getUrl = await page.evaluate(() => {
                     uri = document.querySelector("body > section > main > section.section.pt-0 > section > div > div.table.table-advanced.table--image-view > div > div:nth-child(1) > div.table-cell.table-cell--data > h3")
                         .querySelector("a").getAttribute("href")
                     return uri;
@@ -64,7 +64,7 @@ bot.command("/result",async (ctx) =>{
         }
 })
 bot.command("/search",(ctx)=>{
-    ctx.reply("Введите через пробел: Марка Модель Год")
+    ctx.reply("Введите через пробел: Марка Модель Год Год")
     bot.on('text', (ctx) => {
         if(ctx.message != 0){
             filter = ctx.message.text.split(" ")
