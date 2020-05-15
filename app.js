@@ -26,7 +26,8 @@ bot.command("/result",async (ctx) =>{
             let browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
             let page = await browser.newPage();
             try{
-            await page.goto(movieUrl,{waitUntil:'networkidle2'},{timeout: 3000000});
+                await page.setDefaultNavigationTimeout(0);
+                await page.goto(movieUrl,{waitUntil:'networkidle2'},{timeout: 3000000});
                 let data = await page.evaluate(() => {
                     let lots = document.querySelector('div[class=table-row]').innerText;
                     return lots;
